@@ -7,7 +7,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search tmux)
 source $ZSH/oh-my-zsh.sh
 
 #Personal Aliases
-alias @ls='exa --tree --level=2 --icons'
+alias @ls='exa --tree --level=2 --icons -a'
 alias @pwd='pwd | tee >(pbcopy)'
 alias @ai='arch -arm64 ollama run mistral'
 alias '@??'='gh copilot suggest -t shell'
