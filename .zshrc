@@ -2,7 +2,8 @@
 export ZSH="/Users/dannyroberts/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 DISABLE_MAGIC_FUNCTIONS="true"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+ZSH_TMUX_AUTOSTART=true
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search tmux)
 source $ZSH/oh-my-zsh.sh
 
 #Personal Aliases
