@@ -3,13 +3,17 @@ export ZSH="/Users/dannyroberts/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 DISABLE_MAGIC_FUNCTIONS="true"
 ZSH_TMUX_AUTOSTART=true
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search tmux)
+ZSH_COMMAND_TIME_MIN_SECONDS=3
+ZSH_COMMAND_TIME_MSG="Execution time: %s sec"
+ZSH_COMMAND_TIME_COLOR="cyan"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c0c0c0,bold"
+plugins=(copypath git zsh-autosuggestions zsh-syntax-highlighting tmux command-time)
 source $ZSH/oh-my-zsh.sh
 
 #Personal Aliases
 alias @ls='exa --tree --level=2 --icons -a'
-alias @pwd='pwd | tee >(pbcopy)'
-alias @ai='arch -arm64 ollama run mistral'
+alias @pwd='copypath'
+alias @ai='ollama run llama3:8b'
 alias '@??'='gh copilot suggest -t shell'
 alias @cat='cat ~/.dotfiles/.zshrc'
 alias @code='code . && exit'
