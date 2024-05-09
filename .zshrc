@@ -10,8 +10,18 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c0c0c0,bold"
 plugins=(copypath git zsh-autosuggestions zsh-syntax-highlighting tmux command-time)
 source $ZSH/oh-my-zsh.sh
 
-#Personal Aliases
-alias @ls='exa --tree --level=2 --icons -a'
+#Personal Aliases and Functions
+
+function @ls() {
+    exa --tree --level=${1:-1} --icons -a
+}
+
+function @vim() {
+    local current_date="$(date -u '+%Y-%m-%d_%H-%M-%S').txt"
+    echo $current_date
+    vim ~/desktop/${1:-$current_date}
+}
+
 alias @pwd='copypath'
 alias @ai='ollama run llama3:8b'
 alias '@??'='gh copilot suggest -t shell'
