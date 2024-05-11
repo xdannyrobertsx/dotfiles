@@ -16,8 +16,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 git clone https://github.com/xdannyrobertsx/dotfiles.git $HOME/.dotfiles
 
-git clone https://gitlab.com/alice-lefebvre/pond $HOME/.dotfiles/etc
-
 echo "source $HOME/.dotfiles/.zshrc" >> $HOME/.zshrc
 
 echo $HOME/.dotfiles/.tmux.conf >> $HOME/.tmux.conf
