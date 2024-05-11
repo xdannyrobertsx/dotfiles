@@ -13,15 +13,9 @@ plugins=(copypath git zsh-autosuggestions zsh-syntax-highlighting tmux command-t
 source $ZSH/oh-my-zsh.sh
 
 #Personal Aliases and Functions
-
-function @ls() {
-    exa --tree --level=${1:-1} --icons -a
-}
-
 function @vim() {
     local current_date="$(date -u '+%Y-%m-%d_%H-%M-%S').txt"
-    echo $current_date
-    vim ~/desktop/${1:-$current_date}
+    vim $HOME/desktop/${1:-$current_date}
 }
 
 function @echo() {
@@ -41,7 +35,7 @@ function @echo() {
 alias @pwd='copypath'
 alias @ai='ollama run llama3:8b'
 alias '@??'='gh copilot suggest -t shell'
-alias @cat='cat ~/.dotfiles/.zshrc'
+alias @cat='cat $HOME/.dotfiles/.zshrc'
 alias @code='code . && exit'
-alias @desktop='cd ~/desktop'
+alias @desktop='cd $HOME/desktop'
 alias @diff='if git diff master...HEAD --quiet; then echo "No changes yet!"; else git diff master...HEAD | ollama run llama3:8b "write me a brief summary for this change that will help someone get up to speed when working on this branch"; fi'

@@ -14,7 +14,6 @@ bindings = [
   size = 16.0
 
 [font.normal]
-  family = 'Mononoki Nerd Font'
   style = "Bold"
 
 [colors]
