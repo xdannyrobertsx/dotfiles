@@ -10,11 +10,14 @@ bindings = [
   { key = "Left",  mods = "Alt", chars = "\u001BB" },
 ]
 
+[scrolling]
+history = 10000
+multiplier = 5
+
 [font]
   size = 16.0
 
 [font.normal]
-  family = 'Mononoki Nerd Font'
   style = "Bold"
 
 [colors]
