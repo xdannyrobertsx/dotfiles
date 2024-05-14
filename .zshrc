@@ -1,6 +1,3 @@
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --zsh)"
-
 #Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
@@ -41,3 +38,6 @@ alias @cat='cat $HOME/.dotfiles/.zshrc'
 alias @code='code . && exit'
 alias @desktop='cd $HOME/desktop'
 alias @diff='if git diff master...HEAD --quiet; then echo "No changes yet!"; else git diff master...HEAD | ollama run llama3:8b "write me a brief summary for this change that will help someone get up to speed when working on this branch"; fi'
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
