@@ -2,7 +2,7 @@
 
 brew update && brew upgrade
 
-brew install git tmux
+brew install git tmux fzf highlight
 
 if [ ! -f "$HOME/.zshrc" ]; then
     touch "$HOME/.zshrc"
