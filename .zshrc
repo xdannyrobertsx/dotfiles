@@ -1,3 +1,6 @@
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
 #Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
