@@ -230,7 +230,7 @@
   "shortcuts" : {
     "almostMaximize" : {
       "keyCode" : 36,
-      "modifierFlags" : 1048576
+      "modifierFlags" : 1179648
     },
     "bottomHalf" : {
       "keyCode" : 125,
