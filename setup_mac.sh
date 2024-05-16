@@ -12,6 +12,11 @@ if [ ! -f "$HOME/.tmux.conf" ]; then
     touch "$HOME/.tmux.conf"
 fi
 
+if [ ! -f "$HOME/.config/alacritty/alacritty.toml" ]; then
+    mkdir -p "$HOME/.config/alacritty"
+    ln -s $HOME/.dotfiles/alacritty.toml $HOME/.config/alacritty/alacritty.toml
+fi
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 git clone https://github.com/xdannyrobertsx/dotfiles.git $HOME/.dotfiles
