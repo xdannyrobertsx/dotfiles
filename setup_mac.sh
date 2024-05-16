@@ -18,6 +18,6 @@ git clone https://github.com/xdannyrobertsx/dotfiles.git $HOME/.dotfiles
 
 echo "source $HOME/.dotfiles/.zshrc" >> $HOME/.zshrc
 
-echo $HOME/.dotfiles/.tmux.conf >> $HOME/.tmux.conf
+ln -s $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
 
 echo "setup complete!"
