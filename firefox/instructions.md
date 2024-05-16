@@ -1,37 +1,22 @@
-<!-- https://codeberg.org/ranmaru22/firefox-vertical-tabs/src/branch/main -->
+<!-- https://addons.mozilla.org/en-US/firefox/addon/arcfox/ -->
 
-## How to install
+<!-- https://github.com/betterbrowser/arcfox -->
 
--   Go to `about:config` in your URL bar, search for
-`toolkit.legacyUserProfileCustomizations.stylesheets` and set it to `true`.
--   Go to `about:profiles` in your URL bar, click *\"Open Directory\"* next to
-your Root Directory under your default profile.
--   If there is no `chrome` folder, create it.
--   Create a file called `userChrome.css` inside the `chrome` folder.
--   Copy and paste the contents of `userChrome.css` into your file (or symlink
-it).
--   OPTIONAL: Adjust `--delay` setting in the `userChrome.css` file.
--   OPTIONAL: Adjust `--fullscreen-sidebar-width` setting in the
-`userChrome.css` file.
--   Install the [Tab Center
-Reborn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/)
-extension.
--   Make sure to enable *\"Allow this extension to run in Private windows\"* so
-you\'re not left stranded while browsing.
--   Go to `about:addons` in your URL bar, select **Tab Center Reborn**, go to
-**Preferences** and set:
-    -   **Animations**: on.
-    -   **Use current browser theme**: on, if you want to use dark mode.
-    -   **Compact Mode**: \"Enabled\" is recommended. It works with \"Dynamic\"
-    or \"Disabled\" too but looks nicer with only favicons.
-    -   **Favicon-only pinned tabs**: Your choice. If set to \"on\", you will
-    only have one icon on the top of the collapsed bar and a row of icons in
-    the expanded state, with \"off\", they appear like normal tabs (one per
-    row) with a pin icon on the right and a separator bar between pinned and
-    normal tabs. The mod works well with both settings.
-    -   Activate **Custom Stylesheet** and paste the contents of
-    `tabCenterReborn.min.css` into the text area below, and click \"Save CSS\"
-    under the text box. If you don\'t want to use the minified version, you
-    need to remove some code manually, otherwise Firefox will complain about
-    too large a payload and ignore the CSS completely (see issue #116).
--   Restart Firefox.
+# Installation
+
+### ArcFox-core Installation
+To install arcfox-core you need to download it on your firefox, we recommend you to download from the official addon store:
+
+>Warning: To use arcfox you need arcfox theme!!
+
+<a href="https://addons.mozilla.org/firefox/addon/arcfox/">Download</a>
+
+### ArcFox-Theme Installation
+To install arcfox-theme you need to open your firefox configurations and turn style modification on. To do that please follow this steps:
+
+- Digit <a href="about:config">"about:config"</a> on firefox address bar and click enter.
+- On the search bar, search for "toolkit.legacyUserProfileCustomizations.stylesheets" and set the value to "true".
+- Open <a href="about:support">"about:support"</a> and click on the “Open Folder” button on the right of "Profile Folder" to open it.
+- When the folder opens, search for a folder called "chrome", if you don't find it create one.
+- Inside the "chrome" folder, drop the "userChrome.css" that you find on the <a href="https://github.com/betterbrowser/arcfox/releases">releases.</a>
+- Restart firefox.
