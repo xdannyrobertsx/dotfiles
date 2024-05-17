@@ -1,7 +1,7 @@
 [window]
   dimensions.columns = 80
   dimensions.lines = 25
-  opacity = 0.65
+  opacity = 0.70
   blur = false
 
 [keyboard]
@@ -19,7 +19,7 @@ multiplier = 5
   normal = { family = "Mononoki Nerd Font", style = "Regular" }
 
 [colors]
-  primary.background = '0x161D1C'
+  primary.background = '0x2d333b'
   primary.foreground = '0xE5E9F0'
 
   # Normal colors
