@@ -17,10 +17,6 @@ FZF_CTRL_T_OPTS="--delimiter '/' --nth=-1 $FZF_HIGHLIGHT_PREVIEW_OPTS"
 
 eval "$(fzf --zsh)"
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux new-session -s base -n ✨
-fi
-
 function @find() {
 	RG_PREFIX="rga --files-with-matches"
 	local file
