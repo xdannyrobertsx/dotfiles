@@ -16,12 +16,10 @@ multiplier = 5
 
 [font]
   size = 16.0
-
-[font.normal]
-  style = "Bold"
+  normal = { family = "Mononoki Nerd Font", style = "Regular" }
 
 [colors]
-  primary.background = '0x1F2A28'
+  primary.background = '0x161D1C'
   primary.foreground = '0xE5E9F0'
 
   # Normal colors

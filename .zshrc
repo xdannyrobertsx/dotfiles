@@ -2,16 +2,12 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 DISABLE_MAGIC_FUNCTIONS="true"
-ZSH_TMUX_AUTOCONNECT=true
-ZSH_TMUX_DEFAULT_SESSION_NAME="✨"
-ZSH_COMMAND_TIME_MIN_SECONDS=3
 ZSH_COMMAND_TIME_MSG="Execution time: %s sec"
+ZSH_COMMAND_TIME_MIN_SECONDS=3
 ZSH_COMMAND_TIME_COLOR="cyan"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c0c0c0,bold"
-plugins=(copypath git zsh-autosuggestions zsh-syntax-highlighting tmux command-time)
+plugins=(copypath git zsh-autosuggestions zsh-syntax-highlighting command-time)
 source $ZSH/oh-my-zsh.sh
-
-export TMUX_CONF="$HOME/.dotfiles/.tmux.conf"
 
 FZF_DEFAULT_OPTS="--height=50% --preview 'cat {}' --layout=reverse --info=inline --border --margin=1 --color=bg+:#3B4252,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1"
 
@@ -19,8 +15,11 @@ FZF_HIGHLIGHT_PREVIEW_OPTS="--height 50% --preview '(highlight -O ansi -l {} 2> 
 
 FZF_CTRL_T_OPTS="--delimiter '/' --nth=-1 $FZF_HIGHLIGHT_PREVIEW_OPTS"
 
-
 eval "$(fzf --zsh)"
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux new-session -s base -n ✨
+fi
 
 function @find() {
 	RG_PREFIX="rga --files-with-matches"
