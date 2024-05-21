@@ -6,6 +6,9 @@ ZSH_COMMAND_TIME_MSG="Execution time: %s sec"
 ZSH_COMMAND_TIME_MIN_SECONDS=3
 ZSH_COMMAND_TIME_COLOR="cyan"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c0c0c0,bold"
+
+source $HOME/.config/zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+
 plugins=(copypath git zsh-autosuggestions zsh-syntax-highlighting command-time)
 source $ZSH/oh-my-zsh.sh
 
