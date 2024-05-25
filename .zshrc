@@ -16,6 +16,7 @@ FZF_HIGHLIGHT_PREVIEW_OPTS="--height 50% --preview '(highlight -O ansi -l {} 2> 
 FZF_CTRL_T_OPTS="--delimiter '/' --nth=-1 $FZF_HIGHLIGHT_PREVIEW_OPTS"
 
 eval "$(fzf --zsh)"
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 function @find() {
 	RG_PREFIX="rga --files-with-matches"
