@@ -21,21 +21,6 @@ FZF_CTRL_T_OPTS="--delimiter '/' --nth=-1 $FZF_HIGHLIGHT_PREVIEW_OPTS"
 eval "$(fzf --zsh)"
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-function @find() {
-	RG_PREFIX="rga --files-with-matches"
-	local file
-	file="$(
-		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
-			fzf --height="50%" --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
-				--phony -q "$1" \
-				--bind "change:reload:$RG_PREFIX {q}" \
-                --layout=reverse --info=inline --border --margin=1 --color=bg+:#3B4252,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1\
-				--preview-window="70%:wrap"
-	)" &&
-	echo "opening $file" &&
-	xdg-open "$file"
-}
-
 function @vim() {
     local current_date="$(date -u '+%Y-%m-%d_%H-%M-%S').txt"
     vim $HOME/desktop/${1:-$current_date}
@@ -56,6 +41,7 @@ function @echo() {
 }
 
 alias @pwd='copypath'
+alias @find='fzf --preview "cat {}"'
 alias @ai='ollama run llama3:8b'
 alias '@??'='gh copilot suggest -t shell'
 alias @cat='cat $HOME/.dotfiles/.zshrc'
