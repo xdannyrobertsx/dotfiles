@@ -89,7 +89,7 @@
       "int" : 1
     },
     "hideMenubarIcon" : {
-      "bool" : true
+      "bool" : false
     },
     "ignoreDragSnapToo" : {
       "int" : 0
@@ -194,7 +194,7 @@
       "int" : 0
     },
     "SUEnableAutomaticChecks" : {
-      "bool" : false
+      "bool" : true
     },
     "systemWideMouseDown" : {
       "int" : 0
@@ -229,7 +229,7 @@
   },
   "shortcuts" : {
     "almostMaximize" : {
-      "keyCode" : 36,
+      "keyCode" : 42,
       "modifierFlags" : 1179648
     },
     "bottomHalf" : {
@@ -257,8 +257,8 @@
       "modifierFlags" : 1572864
     },
     "maximize" : {
-      "keyCode" : 3,
-      "modifierFlags" : 1572864
+      "keyCode" : 36,
+      "modifierFlags" : 1179648
     },
     "maximizeHeight" : {
       "keyCode" : 126,
