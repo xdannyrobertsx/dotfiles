@@ -26,19 +26,6 @@ function @vim() {
     vim $HOME/desktop/${1:-$current_date}
 }
 
-function @echo() {
-    if [ $# -eq 1 ]; then
-        while :; do
-            echo "$1"
-            sleep 1
-        done
-    else
-        while :; do
-            echo $(date +"%Y-%m-%d %H:%M:%S")
-            sleep 1
-        done
-    fi
-}
 
 alias @pwd='copypath'
 alias @find='fzf --preview "cat {}"'
@@ -46,6 +33,6 @@ alias @ai='ollama run llama3:8b'
 alias '@??'='gh copilot suggest -t shell'
 alias @cat='cat $HOME/.dotfiles/.zshrc'
 alias @code='code . && exit'
-alias @desktop='$HOME/desktop'
+alias @desktop='cd $HOME/Desktop'
 alias @diff='if git diff master...HEAD --quiet; then echo "No changes yet!"; else git diff master...HEAD | ollama run llama3:8b "write me a brief summary for this change that will help someone get up to speed when working on this branch"; fi'
 
