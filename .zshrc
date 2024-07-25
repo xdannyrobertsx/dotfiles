@@ -28,11 +28,9 @@ function @vim() {
 
 
 alias @pwd='copypath'
-alias @find='fzf --preview "cat {}"'
-alias @ai='ollama run llama3:8b'
+alias fs='rga-fzf'
 alias '@??'='gh copilot suggest -t shell'
 alias @cat='cat $HOME/.dotfiles/.zshrc'
 alias @code='code . && exit'
 alias @desktop='cd $HOME/Desktop'
-alias @diff='if git diff master...HEAD --quiet; then echo "No changes yet!"; else git diff master...HEAD | ollama run llama3:8b "write me a brief summary for this change that will help someone get up to speed when working on this branch"; fi'
 
