@@ -19,7 +19,6 @@ FZF_HIGHLIGHT_PREVIEW_OPTS="--height 50% --preview '(highlight -O ansi -l {} 2> 
 FZF_CTRL_T_OPTS="--delimiter '/' --nth=-1 $FZF_HIGHLIGHT_PREVIEW_OPTS"
 
 eval "$(fzf --zsh)"
-#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 function @vim() {
     local current_date="$(date -u '+%Y-%m-%d_%H-%M-%S').txt"
@@ -43,7 +42,7 @@ function @echo() {
 alias @pwd='copypath'
 alias @find='fzf --preview "cat {}"'
 alias @ai='ollama run llama3:8b'
-alias '@??'='gh copilot suggest -t shell'
+#alias @??='gh copilot suggest -t shell'
 alias @cat='cat $HOME/.dotfiles/.zshrc'
 alias @code='code . && exit'
 alias @desktop='cd $HOME/desktop'
